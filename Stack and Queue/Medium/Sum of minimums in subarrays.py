@@ -4,7 +4,7 @@ class Solution:
         n = len(nums)
         pse = [0] * n
         for i in range(n):
-            while st and nums[st[-1]] >= nums[i]:
+            while st and nums[st[-1]] > nums[i]:
                 st.pop()
             if st:
                 pse[i] = st[-1]
@@ -22,6 +22,8 @@ class Solution:
                 st.pop()
             if st:
                 nse[i] = st[-1]
+            else:
+                nse[i] = n
             st.append(i)
         return nse
 
