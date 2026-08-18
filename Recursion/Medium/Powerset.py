@@ -21,3 +21,4 @@ class Solution:
         result = []
         current = []
         self.possible(0,current,result,nums)
+        return result

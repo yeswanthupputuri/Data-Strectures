@@ -19,3 +19,4 @@ class Solution:
         n = len(nums)
         result = []
         self.possible(0, 0, nums, result)
+        
