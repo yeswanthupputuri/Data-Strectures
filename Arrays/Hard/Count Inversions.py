@@ -21,6 +21,7 @@ class Solution:
         for i in range(low, high + 1):
             arr[i] = temp[i - low]
         return cnt
+    
     def mergeSort(self, arr, low, high):
         cnt = 0
         if low < high:
@@ -29,6 +30,7 @@ class Solution:
             cnt += self.mergeSort(arr, mid + 1, high)
             cnt += self.merge(arr, low, mid, high)
         return cnt
+    
     def numberOfInversions(self, nums):
         n = len(nums)
         return self.mergeSort(nums, 0, n - 1)
